@@ -1,19 +1,45 @@
 body {
-    background-color: #f5d9d5;
-    font-family: Nunito, sans-serif;
+    background: linear-gradient(135deg, #ffe5b4 0%, #b97a56 100%);
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+}
+
+.blurb {
+    background: rgba(255,245,230,0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(185,122,86,0.10), 0 1.5px 8px #ffb347;
+    padding: 2rem 1.5rem;
 }
 
 .blurb h2 {
-    color: #ea1c2c;
-    font-weight: 100;
+    color: #d2691e;
+    font-weight: 700;
     font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 2px 8px #fff3e0;
 }
 
 .blurb p {
-    color: #f498b8;
-    font-weight: 100;
+    color: #a0522d;
+    font-weight: 400;
     font-size: 1.125rem;
     line-height: 2;
+}
+
+.btn-candy {
+    background: linear-gradient(90deg, #ff9800 0%, #b97a56 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #ffb347;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn-candy:hover {
+    background: linear-gradient(90deg, #b97a56 0%, #ff9800 100%);
+    transform: translateY(-2px) scale(1.04);
 }
 
 .content {
@@ -24,32 +50,50 @@ body {
 #mainNavbar {
     font-size: 1.5rem;
     font-weight: 100;
+    background: rgba(210,105,30,0.92);
+    box-shadow: 0 2px 8px #ffb347;
 }
 
 #mainNavbar .navbar-brand {
-    color: #ea1c2c;
-    font-size: 1.5rem;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-shadow: 0 2px 8px #d2691e44;
 }
 
 #mainNavbar .nav-link {
-    color: white;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 #mainNavbar .nav-link:hover {
-    color: #ea1c2c;
+    color: #ff9800;
+    text-decoration: underline;
 }
 
 #headingGroup span {
-    color: #ea1c2c;
+    color: #ff9800;
+    text-shadow: 0 2px 8px #fff3e0;
 }
 
 #headingGroup h2 {
-    font-weight: 100;
+    font-weight: 900;
     font-size: 4rem;
+    letter-spacing: 0.15em;
+    color: #d2691e;
+    text-shadow: 0 2px 16px #fff3e0;
+    animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .navbar.scrolled {
-    background: #dec0de;
+    background: #b97a56;
     transition: background 500ms;
 }
 
@@ -57,4 +101,24 @@ body {
     #headingGroup h2 {
         font-size: 3rem;
     }
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s cubic-bezier(.77,0,.18,1);
+}
+.fadein.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home {
+    scroll-margin-top: 190px;
+    padding-top: 40px;
+}
+
+#products {
+    scroll-margin-top: 140px;
+    padding-top: 40px;
 }
